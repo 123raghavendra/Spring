@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class = "com.xworkz.tv.TV">
+ <!--  <constructor-arg name = "brand" value = "Samsung" index="0"></constructor-arg>-->
+<!--- <constructor-arg  name="price" value ="30000" index="1"></constructor-arg>-->
+ <!---<constructor-arg  name="display" ref ="Display" index="2"></constructor-arg>-->
+ <!---<constructor-arg  name="remote" ref ="remote" index="3"></constructor-arg>-->
+ <!---<constructor-arg  name="stand" ref ="Stand" index="4"></constructor-arg>-->
+ <!--<constructor-arg  name="setupbox" ref ="setupbox" index="5"></constructor-arg>-->
+ 
+ <property name="brand" value ="samsung"></property>
+ <property name="price" value="40000"></property>
+ <property name="display" ref="Display" ></property>
+ <property name="remote" ref="remote"></property>
+ <property name="stand" ref="Stand"></property>
+ <property name="setupbox" ref="setupbox"></property>
+ 
+</bean>
+<bean class = "com.xworkz.tv.Display" id="Display">
+<constructor-arg name="resoulation" value="1950x1950"></constructor-arg>
+</bean>
+<bean class="com.xworkz.tv.Remote" id="remote">
+<constructor-arg name="type" value="Samsung"> </constructor-arg>
+</bean>
+<bean class="com.xworkz.tv.SetUpBox" id="setupbox">
+<constructor-arg name="brandOfSetUpBox" value ="DTH"></constructor-arg>
+</bean>
+<bean class="com.xworkz.tv.Stand" id="Stand">
+<constructor-arg name="colour" value="Black"></constructor-arg >
+</bean>
+
+</beans>

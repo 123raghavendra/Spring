@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean class ="com.xworkz.television.Television">
+      <constructor-arg name= "brand" value= "samsung"></constructor-arg > 
+      <constructor-arg name="price" value ="1400000.00"></constructor-arg>
+      <constructor-arg name="display" ref="1430X1900"></constructor-arg>
+      <constructor-arg name="remote" ref="remote"></constructor-arg>
+       <constructor-arg name="Stand" ref="stand"> </constructor-arg >
+      <constructor-arg name="SetUpBox" ref="setupbox"> </constructor-arg>
+      
+      
+      </bean > 
+      
+      <bean class="com.xworkz.television.Display">
+      
+      
+      
+      </bean>
+
+</beans>
+
+
+
+
