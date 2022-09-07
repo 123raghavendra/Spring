@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.xworkxz.football1.Football1">
+
+
+		<constructor-arg name="brand" value="nike"></constructor-arg>
+		<constructor-arg name="airIsFilled" value="true"></constructor-arg>
+	</bean>
+
+	<bean class="java.lang.Integer">
+		<constructor-arg name="value" value="98"></constructor-arg>
+	</bean>
+
+	<bean class="java.lang.String">
+		<constructor-arg name="original" value="Raghavendra"></constructor-arg>
+	</bean>
+
+	<bean class="java.lang.Double">
+		<constructor-arg name="value" value="30.00"></constructor-arg>
+
+	</bean>
+	<bean class="java.lang.Float">
+		<constructor-arg name="value" value="1200"></constructor-arg>
+
+	</bean>
+	<bean class="java.lang.Boolean">
+		<constructor-arg name="value" value="true"></constructor-arg>
+
+	</bean>
+	<bean class="java.lang.Character">
+	<constructor-arg name="value" value ="R"></constructor-arg>
+	</bean>
+	
+	<bean class ="java.lang.Byte">
+	<constructor-arg name="value" value="40"></constructor-arg>
+	</bean>
+	
+	<bean class="java.lang.Short">
+	<constructor-arg name="value" value="100"></constructor-arg>
+</bean>
+	
+
+</beans>
