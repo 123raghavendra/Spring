@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+  <bean class="com.xworkz.hospital.Hospital"> 
+  
+  
+<constructor-arg  name="hospitalName" value="xyz">  </constructor-arg>
+<constructor-arg name="noOfWorkers" value ="20"> </constructor-arg >
+<constructor-arg  name="estimationAmount" value= "200000000.00">  </constructor-arg>
+<constructor-arg name="specilist" ref="specilist">   </constructor-arg>
+<constructor-arg name="doctor" ref="doctor">   </constructor-arg>
+
+  </bean>      
+       
+<bean class="com.xworkz.hospital.Doctor" id="doctor"> 
+<constructor-arg name="dutyTime" value="9.00">   </constructor-arg>
+</bean>       
+       <bean class="com.xworkz.hospital.Specilist" id="specilist">
+       <constructor-arg name="name" value="Raghavendra">  </constructor-arg>
+       <constructor-arg name="nameOfTheSpecailized" value="Kidney">  </constructor-arg>
+       
+       </bean>
+       
+     
+</beans>  
+      
+       
+       
+       
+       
+       
+       
+      
