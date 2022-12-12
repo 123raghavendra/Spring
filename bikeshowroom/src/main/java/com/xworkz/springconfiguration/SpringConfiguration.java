@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class SpringConfiguration {
 
 	public SpringConfiguration() {
-		System.out.println("Created SpringConfiguration of temple");
+		System.out.println("created  SpringConfiguration of BikeShowRoom");
 	}
 
 }

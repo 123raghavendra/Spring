@@ -5,10 +5,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("com.xworkz")
-public class SpringConfiguration {
+public class OyoSpringConfiguration {
 
-	public SpringConfiguration() {
-		System.out.println("Created SpringConfiguration of temple");
+	public OyoSpringConfiguration() {
+		System.out.println("Created  OyoSpringConfiguration default const");
 	}
 
 }

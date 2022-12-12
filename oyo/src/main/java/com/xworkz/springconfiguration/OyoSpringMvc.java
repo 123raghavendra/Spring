@@ -4,34 +4,33 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
+public class OyoSpringMvc extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
 
-	public SpringInitilizer() {
-		System.out.println("Created  SpringInitilizer default constructor of temple");
-
+	public OyoSpringMvc() {
+		System.out.println("Created  OyoSpringMvc default const");
 	}
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		System.out.println("Created getRootConfigClasses of temple");
+		System.out.println("Created  getRootConfigClasses default const of oyo");
 		return null;
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		System.out.println("Created getServletConfigClasses of temple ");
-		return new Class[] { SpringConfiguration.class };
+		System.out.println("Created  getServletConfigClasses default const of oyo ");
+		return new Class[] { OyoSpringConfiguration.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		System.out.println("Created getServletMappings  of temple");
+		System.out.println("Created  getServletMappings default const of oyo");
 		return new String[] { "/" };
 	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		System.out.println("  created configureDefaultServletHandling default const of temple");
+		System.out.println("Created configureDefaultServletHandling of oyo ");
 		configurer.enable();
 	}
 }

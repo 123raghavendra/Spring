@@ -4,34 +4,34 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
+public class BusStopMvc extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
 
-	public SpringInitilizer() {
-		System.out.println("Created  SpringInitilizer default constructor of temple");
-
+	public BusStopMvc() {
+		System.out.println("Created  BusStopMvc def const");
 	}
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		System.out.println("Created getRootConfigClasses of temple");
+		System.out.println("Created  getRootConfigClasses def const of BusStop");
 		return null;
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		System.out.println("Created getServletConfigClasses of temple ");
+		System.out.println("Created  getServletConfigClasses def const of BusStop");
 		return new Class[] { SpringConfiguration.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		System.out.println("Created getServletMappings  of temple");
+		System.out.println("Created  getServletMappings def const of BusStop");
 		return new String[] { "/" };
 	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		System.out.println("  created configureDefaultServletHandling default const of temple");
+		System.out.println("Created  configureDefaultServletHandling  def  cont of BusStop ");
 		configurer.enable();
 	}
+
 }
