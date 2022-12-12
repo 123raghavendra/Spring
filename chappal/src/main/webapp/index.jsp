@@ -58,7 +58,7 @@ h1 {
   </div>
 </nav>
 <h1>Chappal Information</h1>
-<p style="color: green;">${message}</p>
+<p style="color: black;">${message}</p>
 <p style="color: red;">${error}</p>
   <form  action="save" method="post" style=" text-align: center;">
   <pre>

@@ -43,7 +43,7 @@ h1 {
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-style: oblique;">
 <img alt="adress is wrong" src="https://www.volvobuses.com/content/dam/volvo/volvo-buses/markets/global/en-en/news/2020/1860x1050-Volvo-Bus-KSRTC-2020.jpg" width="200" height="100">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

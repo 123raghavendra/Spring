@@ -68,18 +68,18 @@ h1 {
   
             RentPerDay: <input type="text"  name="rentPerDay" value="${dto.rentPerDay}">
   
-           Maintenance: <input type="radio" name="maintenance" >Yes
-                        <input type="radio" name="maintenance" >No
+           Maintenance: <input type="radio" name="maintenance"   value="Yes" >Yes
+                        <input type="radio" name="maintenance"   value="No">No
         
           NoOfWindows : <input type="text" name="noOfWindows" value="${dto.noOfWindows}">
         
             NoOfEntrys: <input type="text" name="noOfEntrys" value="${dto.noOfEntrys}"> 
 
-          fanAvailable: <input type="radio" name="fanAvailable" >Yes
-                        <input type="radio" name="fanAvailable" >No 
+          fanAvailable: <input type="radio" name="fanAvailable" value="Yes" >Yes
+                        <input type="radio" name="fanAvailable"  value="No">No 
         
-                Mirror: <input type="radio" name="mirror" >Yes
-                        <input type="radio" name="mirror" >No
+                Mirror: <input type="radio" name="mirror"  value="Yes">Yes
+                        <input type="radio" name="mirror"   value="No">No
         
               NoOfBeds: <input type="text" name="noOfBeds" value="${dto.noOfBeds}"> 
         
