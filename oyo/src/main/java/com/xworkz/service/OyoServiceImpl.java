@@ -19,7 +19,7 @@ public class OyoServiceImpl implements OyoService {
 	@Override
 	public boolean validateAndSave(OyoDTO oyoDTO) {
 		System.out.println("validate and save sucessfully");
-		oyoRepo.save(oyoDTO);
-		return true;
+	return	oyoRepo.save(oyoDTO);
+		
 	}
 }

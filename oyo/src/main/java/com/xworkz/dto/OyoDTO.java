@@ -1,8 +1,20 @@
 package com.xworkz.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "oyo_info")
 public class OyoDTO {
-
+	@Id
 	private String ownerName;
 	private int rentPerDay;
 	private boolean maintenance;
@@ -120,7 +132,5 @@ public class OyoDTO {
 				+ ", mirror=" + mirror + ", noOfBeds=" + noOfBeds + ", type=" + type + ", roomColour=" + roomColour
 				+ "]";
 	}
-	
-	
-	
+
 }

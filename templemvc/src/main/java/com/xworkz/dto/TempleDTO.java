@@ -1,7 +1,21 @@
 package com.xworkz.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="templemvc")
 public class TempleDTO {
 
+	@Id
 	private String name;
 	private String location;
 	private String mainGod;

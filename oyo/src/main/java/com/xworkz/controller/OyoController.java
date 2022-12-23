@@ -34,6 +34,9 @@ public class OyoController {
 		}
 		return "index.jsp";
 
+		
+		
+		// manual validation 
 //		if (dto.getNoOfBeds() > 0 && dto.getNoOfEntrys() > 0 && dto.getOwnerName().length() > 5) {
 //			request.setAttribute("message", "Your data saved sucessfully ! thank you ");
 //			System.out.println("save sucessfully");

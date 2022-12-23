@@ -19,7 +19,7 @@ public class BusStopMvc extends AbstractAnnotationConfigDispatcherServletInitial
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		System.out.println("Created  getServletConfigClasses def const of BusStop");
-		return new Class[] { SpringConfiguration.class };
+		return new Class[] { BusStopSpringConfiguration.class };
 	}
 
 	@Override

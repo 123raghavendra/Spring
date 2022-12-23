@@ -19,8 +19,7 @@ public class TempleServiceImpl implements TempleService {
 	@Override
 	public boolean validateAndSave(TempleDTO templeDTO) {
 		System.out.println("Validate and save running sucessfully......");
-		repo.save(templeDTO);
-		return true;
+		return this.repo.save(templeDTO);
 	}
 
 }

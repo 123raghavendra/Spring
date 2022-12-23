@@ -2,15 +2,22 @@ package com.xworkz.dto;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="Chappal_Info")
 public class ChappalDTO implements Serializable{
 	
+	@Id
 	private String brand;
 	private double price;
 	private String colour;

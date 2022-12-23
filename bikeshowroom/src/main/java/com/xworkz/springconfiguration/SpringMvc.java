@@ -26,13 +26,13 @@ public class SpringMvc extends AbstractAnnotationConfigDispatcherServletInitiali
 	@Override
 	protected String[] getServletMappings() {
 		System.out.println("Created  getServletMappings BikeShowRoom default const");
-		return new String[] { "/" };
+		return new String[] {"/"};
 	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		System.out.println("Created  configureDefaultServletHandling default const of BikeShowRoom");
 		configurer.enable();
+		System.out.println("Created  configureDefaultServletHandling default const of BikeShowRoom");
 	}
 
 }

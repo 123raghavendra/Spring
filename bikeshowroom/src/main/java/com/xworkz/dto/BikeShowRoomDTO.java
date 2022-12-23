@@ -1,8 +1,30 @@
 package com.xworkz.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table( name="Bike_Info")
+
+@NamedQuery(name="findByLocation", query = "select abc from BikeShowRoomDTO abc where abc.location=:xy")
+
+//@NamedQuery (name = "findBrandByLocation",query = "select xyz BikeShowRoomDTO xyz.brand=:ab where xyz.location=:cd")})
+
+
+// completed Read and save operation
 public class BikeShowRoomDTO {
 
+	@Id
 	private String brand;
 	private String ownerName;
 	private String location;

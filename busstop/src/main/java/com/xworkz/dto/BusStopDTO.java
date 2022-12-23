@@ -1,20 +1,42 @@
 package com.xworkz.dto;
 
-public class BusStopDTO {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="busstop_info")
+// here dto is alias name
+@NamedQuery(name = "findByBusName",query ="select dto from BusStopDTO dto where dto.busName=:ab")
+public class BusStopDTO implements Serializable{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String busName;
 	private String fromStopName;
 	private String destinationStopName;
 	private int noOfBuses;
 	private double ticketPrize;
-	private boolean maintenance;
+	private String maintenance;
 
 	public BusStopDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public BusStopDTO(String busName, String fromStopName, String destinationStopName, int noOfBuses,
-			double ticketPrize, boolean maintenance) {
+			double ticketPrize, String maintenance) {
 		super();
 		this.busName = busName;
 		this.fromStopName = fromStopName;
@@ -64,11 +86,11 @@ public class BusStopDTO {
 		this.ticketPrize = ticketPrize;
 	}
 
-	public boolean isMaintenance() {
+	public String isMaintenance() {
 		return maintenance;
 	}
 
-	public void setMaintenance(boolean maintenance) {
+	public void setMaintenance(String maintenance) {
 		this.maintenance = maintenance;
 	}
 

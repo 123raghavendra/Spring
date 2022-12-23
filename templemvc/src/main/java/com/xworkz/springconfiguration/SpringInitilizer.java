@@ -20,7 +20,7 @@ public class SpringInitilizer extends AbstractAnnotationConfigDispatcherServletI
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		System.out.println("Created getServletConfigClasses of temple ");
-		return new Class[] { SpringConfiguration.class };
+		return new Class[] { TempleSpringConfiguration.class };
 	}
 
 	@Override

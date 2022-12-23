@@ -1,5 +1,8 @@
 package com.xworkz.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +21,21 @@ public class BikeShowRoomServiceImpl implements BikeShowRoomService {
 	@Override
 	public boolean validateAndSave(BikeShowRoomDTO roomDTO) {
 		System.out.println("Validate and save the data sucessfully");
-		repo.save(roomDTO);
-		return true;
+		return repo.save(roomDTO);
 	}
+
+	// read operation
+	@Override
+	public Optional<List<BikeShowRoomDTO>> findByLocation(String location) {
+
+		return this.repo.findByLocation(location);
+	}
+
+	/*
+	 * @Override public BikeShowRoomDTO findBrandByLocation(String brand, String
+	 * location) {
+	 * 
+	 * return repo.findBrandByLocation(brand, location); }
+	 */
 
 }

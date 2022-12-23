@@ -18,8 +18,8 @@ public class ChappalServiceImpl implements ChappalService {
 	@Override
 	public boolean validateAndSave(ChappalDTO dto) {
 		System.out.println("validate And saved sucessfully");
-		repo.save(dto);
-		return true;
+	return repo.save(dto);
+	
 	}
 
 }

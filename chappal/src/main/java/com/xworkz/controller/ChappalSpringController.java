@@ -12,12 +12,12 @@ import com.xworkz.service.ChappalServiceImpl;
 
 @Component
 @RequestMapping("/save")
-public class SpringController {
+public class ChappalSpringController {
 
 	@Autowired
 	private ChappalServiceImpl chImpl;
 
-	public SpringController() {
+	public ChappalSpringController() {
 		System.out.println("Created SpringController of chappal ");
 	}
 
