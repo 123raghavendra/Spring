@@ -5,6 +5,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -25,9 +27,14 @@ public class PatientSpringConfig {
 	}
 
 	@Bean
-	public ViewResolver resolver(){
+	public ViewResolver viewResolver(){
 	InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver("/" ,".jsp");
 	 return internalResourceViewResolver;
+	}
+	
+	@Bean
+	public MultipartResolver resolver() {
+		return new StandardServletMultipartResolver();
 	}
 
 }

@@ -31,14 +31,18 @@ public class PatientDTO {
 	private String idValue;
 	private String bplCard;
 	private String insurance;
+	private String fileName;
+	private long fileSize;
+	private String contentType;
 
 	public PatientDTO() {
 		System.out.println("executing the patient dto ");
 	}
 
-	public PatientDTO(String name, String email, int age, long mobileNumber, String gender, String idProof,
-			String idValue, String bplCard, String insurance) {
+	public PatientDTO(int id, String name, String email, int age, long mobileNumber, String gender, String idProof,
+			String idValue, String bplCard, String insurance, String fileName, long fileSize, String contentType) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.age = age;
@@ -48,6 +52,9 @@ public class PatientDTO {
 		this.idValue = idValue;
 		this.bplCard = bplCard;
 		this.insurance = insurance;
+		this.fileName = fileName;
+		this.fileSize = fileSize;
+		this.contentType = contentType;
 	}
 
 	public int getId() {
@@ -114,12 +121,12 @@ public class PatientDTO {
 		this.idValue = idValue;
 	}
 
-	public String getBpLCard() {
+	public String getBplCard() {
 		return bplCard;
 	}
 
-	public void setBpLCard(String bpLCard) {
-		this.bplCard = bpLCard;
+	public void setBplCard(String bplCard) {
+		this.bplCard = bplCard;
 	}
 
 	public String getInsurance() {
@@ -130,11 +137,36 @@ public class PatientDTO {
 		this.insurance = insurance;
 	}
 
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public long getFileSize() {
+		return fileSize;
+	}
+
+	public void setFileSize(long fileSize) {
+		this.fileSize = fileSize;
+	}
+
+	public String getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+
 	@Override
 	public String toString() {
-		return "PatientDTO [name=" + name + ",id=" + id + ", email=" + email + ", age=" + age + ", mobileNumber="
+		return "PatientDTO [id=" + id + ", name=" + name + ", email=" + email + ", age=" + age + ", mobileNumber="
 				+ mobileNumber + ", gender=" + gender + ", idProof=" + idProof + ", idValue=" + idValue + ", bplCard="
-				+ bplCard + ", insurance=" + insurance + "]";
+				+ bplCard + ", insurance=" + insurance + ", fileName=" + fileName + ", fileSize=" + fileSize
+				+ ", contentType=" + contentType + "]";
 	}
 
 }

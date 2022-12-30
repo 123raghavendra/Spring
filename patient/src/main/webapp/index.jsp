@@ -1,4 +1,5 @@
-<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,18 +21,21 @@ body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
+
 p {
 	text-align: center;
 	font-size: xx-large;
 	font-weight: bold;
 	font-style: oblique;
 }
+
 form {
-	font-size:x-large;
+	font-size: x-large;
 	font-weight: bold;
 	font-style: italic;
 	color: fuchsia;
 }
+
 h1 {
 	text-align: center;
 	font-size: xx-large;
@@ -57,14 +61,14 @@ h1 {
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="#">Home</a></li>
-						<li class="nav-item"><a class="nav-link active"
+					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="search.jsp">SEARCH</a></li>
-				
-					
-					
+
+
+
 				</ul>
-		
-				
+
+
 			</div>
 		</div>
 	</nav>
@@ -72,20 +76,21 @@ h1 {
 	<p style="color: yellow;">${message}</p>
 	<p style="color: red;">${error}</p>
 
-	<form action="save" method="post" style="text-align: center;">
+	<form action="save" method="post" enctype="multipart/form-data"
+		style="text-align: center;">
 		<pre>  
 	     Name   <input type="text" name="name" value=" ${dto.name}">
 	
-	      Email  <input type="email" name=" email "value=" ${dto.email}">
+	      Email  <input type="email" name=" email " value=" ${dto.email}">
 	
 	       Age    <input type="number" name="age" value=" ${dto.age}">
 	
               Mb-No  <input type="number" name="mobileNumber"
 				value=" ${dto.age}">
 	
-Gender   <input type="radio" name="gender"> Male
-	   <input type="radio" name="gender"> Female
-	   <input type="radio" name="gender"> Other
+Gender   <input type="radio" name="gender" value="Male"> Male
+	   <input type="radio" name="gender" value="Female"> Female
+	   <input type="radio" name="gender" value="Other"> Other
 	
 	
         IdProof  <select name="idProof">
@@ -102,10 +107,10 @@ Gender   <input type="radio" name="gender"> Male
      BPlCard  <input type="radio" name="bplCard" value="yes"> Yes
 	     <input type="radio" name="bplCard" value="No"> No
 	
-   Insurance <input type="radio" name="insurance"> Yes
-	    <input type="radio" name="insurance"> No
+   Insurance <input type="radio" name="insurance" value="Yes"> Yes
+	    <input type="radio" name="insurance" value="No"> No
 	    
-	    
+	  Select File  <input type="file" name="file">
 	    <input type="submit" name="save" value="save">
 	         </pre>
 
